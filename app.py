@@ -5,7 +5,6 @@ import joblib
 import plotly.graph_objects as go
 
 rf_model = joblib.load('rf_model.pkl')
-
 scaler = joblib.load('scaler.pkl')
 
 st.title("🚰 Water Consumption Prediction App")
