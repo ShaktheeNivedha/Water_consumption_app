@@ -1,12 +1,16 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
 import plotly.graph_objects as go
 
-rf_model = joblib.load('rf_model.pkl')
+import pickle
 
-scaler = joblib.load('scaler.pkl')
+with open("rf_model_pickle.pkl", "rb") as f:
+    rf_model = pickle.load(f)
+
+with open("scaler_pickle.pkl", "rb") as f:
+    scaler = pickle.load(f)
+
 
 st.title("🚰 Water Consumption Prediction App")
 st.markdown("This app predicts future water consumption using AI models.")
